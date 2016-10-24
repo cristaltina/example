@@ -334,10 +334,10 @@
             <img class="love" id="love3" src="imgs/icon_praise_big_3.png">
         </div>
     </div>
-    <div class="perScreen" id="screen1">
+    <div class="perScreen" id="screen1" style="display:none">
         <div id="container1">
             <div style="width:100%;height:3rem;">
-                <img src="imgs/default_avatar.png" style="width:5rem;height:5rem;border-radius:2rem">
+                <img src="imgs/default_avatar.png" style="width:5rem;height:5rem;border-radius:2rem;margin-left:-0.5rem;margin-top:-0.5rem">
             </div>
             <div style="width:100%;height:4rem;font-size:1.5rem;color:white;margin-top:5rem">
                 <span style="margin-left:8rem">aaaa</span><span id="born"></span>
@@ -372,7 +372,7 @@
 
         </div>
     </div>
-    <div class="perScreen" id="screen2">
+    <div class="perScreen" id="screen2" style="display:none">
         <p style="float:right;font-size:1.5rem;color:white">bbbbbbbbb</p>
         <div id="picss">
             <img class="pic" id="pic10" src="imgs/default_avatar.png">
@@ -390,7 +390,7 @@
             <img id="next2" src="imgs/default_avatar.png" onclick="nextScreen2()">
         </div>
     </div>
-    <div class="perScreen" id="screen3">
+    <div class="perScreen" id="screen3" style="display:none">
         <div class="card-container-5">
             <div class="card">
                 <!--             <h1>1</h1> -->
@@ -555,6 +555,7 @@
         // console.log(top);
         // $("body").scrollTop(top);
         $("#screen0").hide();
+        $("#screen1").show();
         $('#born').animateNumber(
                 {
                     number: 22,
@@ -636,6 +637,7 @@
         // console.log(top);
         // $("body").scrollTop(top);
         $("#screen1").hide();
+        $("#screen2").show();
         $("#pic10").show(1000,function(){
             $("#pic11").show(1000,function(){
                 $("#pic12").show(1000,function(){
@@ -664,6 +666,7 @@
         // console.log(top);
         // $("body").scrollTop(top);
         $("#screen2").hide();
+        $("#screen3").show();
         initImgs();
 
     }
