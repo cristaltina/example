@@ -107,61 +107,61 @@
       #pic0{
             position: absolute;
             left:21rem;
-            top:9rem;
+            top:8rem;
             display: none;
         }
         #pic1{
             position: absolute;
             left:21rem;
-            top:16rem;
+            top:15rem;
             display: none;
         }
         #pic2{
             position: absolute;
             left:21rem;
-            top:23rem;
+            top:22rem;
             display: none;
         }
         #pic3{
             position: absolute;
             left:21rem;
-            top:30rem;
+            top:29rem;
             display: none;
         }
         #pic4{
             position: absolute;
             left:16rem;
-            top:12rem;
+            top:11rem;
             display: none;
         }
         #pic5{
             position: absolute;
             left:16rem;
-            top:19rem;
+            top:18rem;
             display: none;
         }
         #pic6{
             position: absolute;
             left:16rem;
-            top:26rem;
+            top:25rem;
             display: none;
         }
         #pic7{
             position: absolute;
             left:11rem;
-            top:15rem;
+            top:14rem;
             display: none;
         }
         #pic8{
             position: absolute;
             left:11rem;
-            top:22rem;
+            top:21rem;
             display: none;
         }
         #pic9{
             position: absolute;
             left:6rem;
-            top:19rem;
+            top:18rem;
             display: none;
         }
         #next1{
@@ -172,61 +172,61 @@
       #pic10{
             position: absolute;
             left:2rem;
-            top:9rem;
+            top:8rem;
             display: none;
         }
         #pic11{
             position: absolute;
             left:2rem;
-            top:16rem;
+            top:15rem;
             display: none;
         }
         #pic12{
             position: absolute;
             left:2rem;
-            top:23rem;
+            top:22rem;
             display: none;
         }
         #pic13{
             position: absolute;
             left:2rem;
-            top:30rem;
+            top:29rem;
             display: none;
         }
         #pic14{
             position: absolute;
             left:7rem;
-            top:12rem;
+            top:11rem;
             display: none;
         }
         #pic15{
             position: absolute;
             left:7rem;
-            top:19rem;
+            top:18rem;
             display: none;
         }
         #pic16{
             position: absolute;
             left:7rem;
-            top:26rem;
+            top:25rem;
             display: none;
         }
         #pic17{
             position: absolute;
             left:12rem;
-            top:15rem;
+            top:14rem;
             display: none;
         }
         #pic18{
             position: absolute;
             left:12rem;
-            top:22rem;
+            top:21rem;
             display: none;
         }
         #pic19{
             position: absolute;
             left:17rem;
-            top:19rem;
+            top:18rem;
             display: none;
         }
         #next2{
@@ -370,7 +370,7 @@
     <div class="perScreen" id="screen1" style="display:none">
         <div id="container1">
             <div style="width:100%;height:3rem;">
-                <img src="imgs/default_avatar.png" style="width:5rem;height:5rem;border-radius:2rem;position:absolute;left:2rem;top:3rem">
+                <img id="you2" src="imgs/default_avatar.png" style="width:5rem;height:5rem;border-radius:2rem;position:absolute;left:2rem;top:3rem">
             </div>
             <div style="width:100%;height:4rem;font-size:1.5rem;color:white;margin-top:5rem">
                 <span style="margin-left:8rem">aaaa</span><span id="born"></span>
@@ -445,13 +445,13 @@
                 </div>
             </div>
         </div>
-        <div style="width:100%;height:2rem;text-align:center;margin-top:5rem">
+        <div style="width:100%;height:2rem;text-align:center;margin-top:4.5rem">
             <img id="next3" src="imgs/default_avatar.png" onclick="nextScreen3()">
         </div>
     </div>
     <div class="perScreen" id="screen4" style="display:none">
         <p style="font-size:1.5rem;color:white;margin-bottom:1rem;margin-top:0">ccccccccccc</p>
-        <div class="picFrame" id="picFrameDiv" style="background-color:#1c1c1c;display:none">
+        <div class="picFrame" id="picFrameDiv" style="background-color:#1c1c1c;border:0;display:none">
             <div class="picItem" style="z-index: 6; top:15rem"> <img src="imgs/icon_share_screenshot@2x.png"> </div>
             <div class="picItem" style="z-index:5;"> <img src="imgs/icon_share_screenshot@2x.png"> </div>
             <div class="picItem" style="z-index:4;"> <img src="imgs/icon_share_screenshot@2x.png"> </div>
@@ -651,6 +651,7 @@
         );
         $("#container1").animate({height:"26.52rem"},12000,function(){
             $("#container1").animate({height:"0"},3000,function(){
+                $("#you2").animate({height:"0"},3000,function(){
                 $("#container1").hide();
                 $("#container2").show(1000,function(){
                     $("#pic0").show(1000,function(){
@@ -675,6 +676,7 @@
                         })
                     })
                 });
+                })
             });
         });
 
