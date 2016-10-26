@@ -61,8 +61,8 @@
             height: 5rem;
             border-radius: 2rem;
             position: absolute;
-            right: 0;
-            bottom: 0;
+            right: 2rem;
+            bottom: 3rem;
         }
         .love{
             width: 2rem;
@@ -104,7 +104,7 @@
             font-size: 2rem;
             margin-left: 0.5rem;
         }
-        #pic0{
+      #pic0{
             position: absolute;
             left:21rem;
             top:9rem;
@@ -169,7 +169,7 @@
             height:2rem;
             display: none;
         }
-        #pic10{
+      #pic10{
             position: absolute;
             left:2rem;
             top:9rem;
@@ -234,14 +234,31 @@
             height:2rem;
             display: none;
         }
-        /*        div[class*='card-container-'] {
-                    position: relative;
-                    margin: 40px auto;
-                    width: 200px;
-                    height: 200px;
-                    -webkit-perspective: 500px;
-                    perspective: 500px;
-                }*/
+        #next3{
+            width:2rem;
+            height:2rem;
+            display: none;
+        }
+        #places{
+            width: 100%;
+            height: 10rem;
+            color: #999999;
+        }
+        #firstWord{
+            font-size: 1rem;
+            float: left;
+            line-height: 2.8rem;
+        }
+        #secondWord{
+            font-size: 2rem;
+            float: left;
+            line-height: 2rem;
+        }
+        #thirdWord{
+            font-size: 1rem;
+            float: left;
+            line-height: 2.8rem;
+        }
         .card h1 {
             font-size: 2rem;
             font-weight: 600;
@@ -249,7 +266,6 @@
         }
         .card-container-5 {
             margin-left: 3rem;
-            margin-top: 5rem;
             position: relative;
             width: 15rem;
             height: 22rem;
@@ -299,18 +315,40 @@
             width: 15rem;
             height: 22rem;
         }
+        .picFrame {
+            background-color:#CCC;
+            border: #CCC 1px solid;
+            width: 800px;
+            height: 1200px;
+            margin: auto;
+            margin-top: 40px;
+            position: relative;/*启动相对定位 让子集元素能相对与 父级元素定位*/
+            overflow: hidden;
+        }
+        .picFrame .picItem {
+            position: absolute;/*开启绝对定位  相对于父级元素定位*/
+            left: 0;
+            top: 0;
+            width:800px;
+            height: 1200px;
+        }
+        .picItem img{
+            width:800px;
+            height: 1200px;
+        }
+ 
 
     </style>
-    <script type="text/javascript" src="stylesheets/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="stylesheets/jquery.animateNumber.js"></script>
+    <script type="text/javascript" src="./resources/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./resources/js/jquery.animateNumber.min.js"></script>
 </head>
 <body style="font-size: 12px;margin:0;background:#1c1c1c">
 <div class="container">
     <div class="perScreen" id="screen0">
         <!--        <div style="width:24.5rem;height:5rem"> -->
-        <img id="me" src="imgs/default_avatar.png" >
+        <img id="me" src="resources/images/customActivity/default_avatar.png" >
         <!--        </div> -->
-        <div style="width:15.8rem;height:10rem;margin:13rem 0 13rem 4.5rem;font-size:1rem;color:white;">
+        <div style="width:15.8rem;height:10rem;margin:15rem 0 11rem 4.5rem;font-size:1rem;color:white;">
             <p id="question">When</p>
             <div id="answer">
                 <input id="year" class="dateInput" type="text" style="width:4rem"><span style="padding:0.2rem">年</span>
@@ -321,23 +359,23 @@
                 <span id="confirm0" onclick="confirm0()">Confirm</span>
             </div>
         </div>
-        <div style="width:100%;height:2rem;text-align:center;margin-top:11.5rem">
-            <img id="next" src="imgs/default_avatar.png" onclick="nextScreen()">
+        <div style="width:100%;height:2rem;text-align:center;margin-top:16.5rem">
+            <img id="next" src="resources/images/customActivity/default_avatar.png" onclick="nextScreen()">
         </div>
         <!--        <div style="width:24.5rem;height:5rem;"> -->
-        <img id="you" src="imgs/default_avatar.png" >
+        <img id="you" src="resources/images/customActivity/default_avatar.png" >
         <!--        </div> -->
         <div id="loves">
-            <img class="love" id="love0" src="imgs/icon_praise_big_3.png">
-            <img class="love" id="love1" src="imgs/icon_praise_big_3.png">
-            <img class="love" id="love2" src="imgs/icon_praise_big_3.png">
-            <img class="love" id="love3" src="imgs/icon_praise_big_3.png">
+            <img class="love" id="love0" src="resources/images/wx1.9.0/icon_praise_big_3.png">
+            <img class="love" id="love1" src="resources/images/wx1.9.0/icon_praise_big_3.png">
+            <img class="love" id="love2" src="resources/images/wx1.9.0/icon_praise_big_3.png">
+            <img class="love" id="love3" src="resources/images/wx1.9.0/icon_praise_big_3.png">
         </div>
     </div>
     <div class="perScreen" id="screen1" style="display:none">
         <div id="container1">
             <div style="width:100%;height:3rem;">
-                <img src="imgs/default_avatar.png" style="width:5rem;height:5rem;border-radius:2rem;">
+                <img src="resources/images/customActivity/default_avatar.png" style="width:5rem;height:5rem;border-radius:2rem">
             </div>
             <div style="width:100%;height:4rem;font-size:1.5rem;color:white;margin-top:5rem">
                 <span style="margin-left:8rem">aaaa</span><span id="born"></span>
@@ -353,65 +391,81 @@
             </div>
         </div>
         <div id="container2" style="display: none">
-            <p style="margin-left:0.5rem;font-size:1.5rem;color:white">aaaaaaaaaaa</p>
+            <p style="margin-left:2rem;font-size:1.5rem;color:white">aaaaaaaaaaa</p>
             <div id="pics">
-                <img class="pic" id="pic0" src="imgs/default_avatar.png">
-                <img class="pic" id="pic1" src="imgs/default_avatar.png">
-                <img class="pic" id="pic2" src="imgs/default_avatar.png">
-                <img class="pic" id="pic3" src="imgs/default_avatar.png">
-                <img class="pic" id="pic4" src="imgs/default_avatar.png">
-                <img class="pic" id="pic5" src="imgs/default_avatar.png">
-                <img class="pic" id="pic6" src="imgs/default_avatar.png">
-                <img class="pic" id="pic7" src="imgs/default_avatar.png">
-                <img class="pic" id="pic8" src="imgs/default_avatar.png">
-                <img class="pic" id="pic9" src="imgs/default_avatar.png">
+                <img class="pic" id="pic0" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic1" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic2" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic3" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic4" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic5" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic6" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic7" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic8" src="resources/images/customActivity/default_avatar.png">
+                <img class="pic" id="pic9" src="resources/images/customActivity/default_avatar.png">
             </div>
-            <div style="width:100%;height:2rem;text-align:center;margin-top:30.5rem">
-                <img id="next1" src="imgs/default_avatar.png" onclick="nextScreen1()">
+            <div style="width:100%;height:2rem;text-align:center;margin-top:38.5rem">
+                <img id="next1" src="resources/images/customActivity/default_avatar.png" onclick="nextScreen1()">
             </div>
 
         </div>
     </div>
-    <div class="perScreen" id="screen2" style="display:none">
-        <p style="float:right;font-size:1.5rem;color:#999999">bbbbbbbbb</p>
+    <div class="perScreen" id="screen2" style="display: none">
+        <p style="float:right;font-size:1.5rem;color:white">bbbbbbbbb</p>
         <div id="picss">
-            <img class="pic" id="pic10" src="imgs/default_avatar.png">
-            <img class="pic" id="pic11" src="imgs/default_avatar.png">
-            <img class="pic" id="pic12" src="imgs/default_avatar.png">
-            <img class="pic" id="pic13" src="imgs/default_avatar.png">
-            <img class="pic" id="pic14" src="imgs/default_avatar.png">
-            <img class="pic" id="pic15" src="imgs/default_avatar.png">
-            <img class="pic" id="pic16" src="imgs/default_avatar.png">
-            <img class="pic" id="pic17" src="imgs/default_avatar.png">
-            <img class="pic" id="pic18" src="imgs/default_avatar.png">
-            <img class="pic" id="pic19" src="imgs/default_avatar.png">
+            <img class="pic" id="pic10" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic11" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic12" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic13" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic14" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic15" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic16" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic17" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic18" src="resources/images/customActivity/default_avatar.png">
+            <img class="pic" id="pic19" src="resources/images/customActivity/default_avatar.png">
         </div>
-        <div style="width:100%;height:2rem;text-align:center;margin-top:34rem">
-            <img id="next2" src="imgs/default_avatar.png" onclick="nextScreen2()">
+        <div style="width:100%;height:2rem;text-align:center;margin-top:41.5rem">
+            <img id="next2" src="resources/images/customActivity/default_avatar.png" onclick="nextScreen2()">
         </div>
     </div>
     <div class="perScreen" id="screen3" style="display:none">
-        <div class="card-container-5">
-            <div class="card">
-                <!--             <h1>1</h1> -->
-                <img class="imgs" src="imgs/icon_share_screenshot@2x.png">
+        <div id="places">
+            <div id="firstWord"></div>
+            <div id="secondWord"></div>
+            <div id="thirdWord"></div>
+        </div>
+        <div style="width:15rem;height:22rem;margin-top:3rem">
+            <div class="card-container-5"  id="tickets" style="display:none">
+                <div class="card">
+                    <img class="imgs" src="resources/images/customActivity/9/icon_share_screenshot@2x.png">
+                </div>
+                <div class="card">
+                    <img class="imgs" src="resources/images/customActivity/9/icon_share_screenshot@2x.png">
+                </div>
+                <div class="card">
+                    <img class="imgs" src="resources/images/customActivity/9/icon_share_screenshot@2x.png">
+                </div>
+                <div class="card">
+                    <img class="imgs" src="resources/images/customActivity/9/icon_share_screenshot@2x.png">
+                </div>
             </div>
-            <div class="card">
-                <!--        <h1>2</h1> -->
-                <img class="imgs" src="imgs/icon_share_screenshot@2x.png">
-            </div>
-            <div class="card">
-                <!--             <h1>3</h1> -->
-                <img class="imgs" src="imgs/icon_share_screenshot@2x.png">
-            </div>
-            <div class="card">
-                      <!--       <h1>4</h1> -->
-                <img class="imgs" src="imgs/icon_share_screenshot@2x.png">
-            </div>
-           <div class="card">
-                          <!--   <h1>5</h1> -->
-                <img class="imgs" src="imgs/icon_share_screenshot@2x.png">
-            </div>
+        </div>
+        <div style="width:100%;height:2rem;text-align:center;margin-top:3rem">
+            <img id="next3" src="resources/images/customActivity/default_avatar.png" onclick="nextScreen3()">
+        </div>
+    </div>
+    <div class="perScreen" id="screen4" style="display:none">
+        <p style="font-size:1.5rem;color:white;margin-bottom:3rem">ccccccccccc</p>
+        <div class="picFrame" id="picFrameDiv" style="display:none">
+            <div class="picItem" style="z-index: 6; top:15rem"> <img src="resources/images/customActivity/9/icon_share_screenshot@2x.png"> </div>
+            <div class="picItem" style="z-index:5;"> <img src="resources/images/customActivity/9/icon_share_screenshot@2x.png"> </div>
+            <div class="picItem" style="z-index:4;"> <img src="resources/images/customActivity/9/icon_share_screenshot@2x.png"> </div>
+            <div class="picItem" style="z-index:3;"> <img src="resources/images/customActivity/9/icon_share_screenshot@2x.png"> </div>
+            <div class="picItem" style="z-index:2;"> <img src="resources/images/customActivity/9/icon_share_screenshot@2x.png"> </div>
+            <div class="picItem" style="z-index:1;"> <img src="resources/images/customActivity/9/icon_share_screenshot@2x.png"> </div>
+        </div>
+        <div style="width:100%;height:2rem;text-align:center;margin-top:3rem">
+            <img id="next4" src="resources/images/customActivity/default_avatar.png" onclick="nextScreen4()" style="display:none">
         </div>
     </div>
 </div>
@@ -426,6 +480,8 @@
     var movie;
     var giftu,giftme;
     var loveme;
+    //创建移动数组后 启动引擎
+    var objArray=new Array();
 
     // $ (window).scroll (function ()
     //     {
@@ -452,14 +508,14 @@
             $("#confirmBtn").empty();
             var trr = "<span id='confirm1' onclick='confirm1()'>Confirm</span>";
             $("#confirmBtn").append(trr);
-            $("#me").attr("src","imgs/default_avatar.png");
-            $("#you").attr("src","imgs/default_avatar.png");
+            $("#me").attr("src","resources/images/customActivity/default_avatar.png");
+            $("#you").attr("src","resources/images/customActivity/default_avatar.png");
         }else{
             $("#year").val("");
             $("#month").val("");
             $("#day").val("");
-            $("#me").attr("src","imgs/icon_comments_big_2@2x.png");
-            $("#you").attr("src","imgs/icon_comments_big_2@2x.png");
+            $("#me").attr("src","resources/images/customActivity/6/icon_comments_big_2@2x.png");
+            $("#you").attr("src","resources/images/customActivity/6/icon_comments_big_2@2x.png");
         }
     }
 
@@ -477,12 +533,12 @@
             $("#confirmBtn").empty();
             var trr ="<span id='confirm2' onclick='confirm2()'>Confirm</span>";
             $("#confirmBtn").append(trr);
-            $("#me").attr("src","imgs/default_avatar.png");
-            $("#you").attr("src","imgs/default_avatar.png");
+            $("#me").attr("src","resources/images/customActivity/default_avatar.png");
+            $("#you").attr("src","resources/images/customActivity/default_avatar.png");
         }else{
             $("#movie").val("");
-            $("#me").attr("src","imgs/icon_comments_big_2@2x.png");
-            $("#you").attr("src","imgs/icon_comments_big_2@2x.png");
+            $("#me").attr("src","resources/images/customActivity/6/icon_comments_big_2@2x.png");
+            $("#you").attr("src","resources/images/customActivity/6/icon_comments_big_2@2x.png");
         }
     }
 
@@ -499,12 +555,12 @@
             $("#confirmBtn").empty();
             var trr ="<span id='confirm3' onclick='confirm3()'>Confirm</span>";
             $("#confirmBtn").append(trr);
-            $("#me").attr("src","imgs/default_avatar.png");
-            $("#you").attr("src","imgs/default_avatar.png");
+            $("#me").attr("src","resources/images/customActivity/default_avatar.png");
+            $("#you").attr("src","resources/images/customActivity/default_avatar.png");
         }else{
             // $("input[name='gift0']:checked").attr("chechked",false);
-            $("#me").attr("src","imgs/icon_comments_big_2@2x.png");
-            $("#you").attr("src","imgs/icon_comments_big_2@2x.png");
+            $("#me").attr("src","resources/images/customActivity/6/icon_comments_big_2@2x.png");
+            $("#you").attr("src","resources/images/customActivity/6/icon_comments_big_2@2x.png");
         }
 
     }
@@ -522,11 +578,11 @@
             $("#confirmBtn").empty();
             var trr ="<span id='confirm4' onclick='confirm4()'>Confirm</span>";
             $("#confirmBtn").append(trr);
-            $("#me").attr("src","imgs/default_avatar.png");
-            $("#you").attr("src","imgs/default_avatar.png");
+            $("#me").attr("src","resources/images/customActivity/default_avatar.png");
+            $("#you").attr("src","resources/images/customActivity/default_avatar.png");
         }else{
-            $("#me").attr("src","imgs/icon_comments_big_2@2x.png");
-            $("#you").attr("src","imgs/icon_comments_big_2@2x.png");
+            $("#me").attr("src","resources/images/customActivity/6/icon_comments_big_2@2x.png");
+            $("#you").attr("src","resources/images/customActivity/6/icon_comments_big_2@2x.png");
         }
 
     }
@@ -550,10 +606,7 @@
     }
 
     function nextScreen(){
-        // console.log("nextScreen0");
-        // var top = document.body.clientHeight - 100;
-        // console.log(top);
-        // $("body").scrollTop(top);
+        console.log("nextScreen");
         $("#screen0").hide();
         $("#screen1").show();
         $('#born').animateNumber(
@@ -569,39 +622,39 @@
                         target.text(floored_number);
                     }
                 },
-                9000
+                11000
         );
         $('#together').animateNumber(
                 {
-                    number: 600,
+                    number: 695,
 
                     numberStep: function (now, tween) {
 
-                        var floored_number = Math.floor(now) / 600,
+                        var floored_number = Math.floor(now) / 695,
                                 target = $(tween.elem);
-                        floored_number = (floored_number * 600).toFixed(0);
+                        floored_number = (floored_number * 695).toFixed(0);
 
                         target.text(floored_number);
                     }
                 },
-                9000
+                11000
         );
         $('#forever').animateNumber(
                 {
-                    number: 1000000,
+                    number: 6000000,
 
                     numberStep: function (now, tween) {
 
-                        var floored_number = Math.floor(now) / 1000000,
+                        var floored_number = Math.floor(now) / 6000000,
                                 target = $(tween.elem);
-                        floored_number = (floored_number * 1000000).toFixed(0);
+                        floored_number = (floored_number * 6000000).toFixed(0);
 
                         target.text(floored_number);
                     }
                 },
-                9000
+                15000
         );
-        $("#container1").animate({height:"26.7rem"},10000,function(){
+        $("#container1").animate({height:"26.52rem"},12000,function(){
             $("#container1").animate({height:"0"},3000,function(){
                 $("#container1").hide();
                 $("#container2").show(1000,function(){
@@ -637,18 +690,19 @@
         // console.log(top);
         // $("body").scrollTop(top);
         $("#screen1").hide();
-        $("#screen2").show();
-        $("#pic10").show(1000,function(){
-            $("#pic11").show(1000,function(){
-                $("#pic12").show(1000,function(){
-                    $("#pic13").show(1000,function(){
-                        $("#pic14").show(1000,function(){
-                            $("#pic15").show(1000,function(){
-                                $("#pic16").show(1000,function(){
-                                    $("#pic17").show(1000,function(){
-                                        $("#pic18").show(1000,function(){
-                                            $("#pic19").show(1000,function(){
-                                                $("#next2").show();
+        $("#screen2").show(1000,function(){
+            $("#pic10").show(1000,function(){
+                $("#pic11").show(1000,function(){
+                    $("#pic12").show(1000,function(){
+                        $("#pic13").show(1000,function(){
+                            $("#pic14").show(1000,function(){
+                                $("#pic15").show(1000,function(){
+                                    $("#pic16").show(1000,function(){
+                                        $("#pic17").show(1000,function(){
+                                            $("#pic18").show(1000,function(){
+                                                $("#pic19").show(1000,function(){
+                                                    $("#next2").show();
+                                                })
                                             })
                                         })
                                     })
@@ -659,6 +713,7 @@
                 })
             })
         })
+
     }
     function nextScreen2(){
         console.log("nextScreen2");
@@ -667,8 +722,47 @@
         // $("body").scrollTop(top);
         $("#screen2").hide();
         $("#screen3").show();
-        initImgs();
+        initPlaces();
 
+    }
+    function initPlaces() {
+        var s = 'Hello World!';
+        var ss = 'AAA、BB';
+        var sss = 'blabla'
+        var index = 0;
+        var index2 = 0;
+        var index3 = 0;
+        var length = s.length;
+        var length2 = ss.length;
+        var length3 = sss.length;
+        var tId = null;
+
+        function start(){
+            $('#firstWord').text('');
+            $('#secondWord').text('');
+            $('#thirdWord').text('');
+
+            tId=setInterval(function(){
+                $('#firstWord').append(s.charAt(index));
+                if(index++ === length){
+                    // clearInterval(tId);
+                    // index = 0;
+                    // start()
+                    $('#secondWord').append(ss.charAt(index2));
+                    if(index2++ === length2){
+                        $('#thirdWord').append(sss.charAt(index3));
+                        if(index3++ === length3){
+                            $("#tickets").show(1000);
+                            initImgs();
+                            $("#next3").show(1000);
+                            clearInterval(tId);
+                        }
+                        index2--;}
+                    index--;}
+            },200);
+        }
+
+        start();
     }
     function initImgs(){
         var cc5 = $('.card-container-5');
@@ -684,6 +778,121 @@
                 firstCard.attr('style','');
             },300);
         });
+    }
+
+    function nextScreen3(){
+        console.log("nextScreen3");
+        $("#screen3").hide();
+        $("#screen4").show(1000,function(){
+            $("#picFrameDiv").show(1000,function(){
+                initImgs1();
+            });
+        });
+
+    }
+
+    function initImgs1() {
+        //启动引擎  FPS 刷新率  刷新率越高一般看起来越流畅 但是也要看电脑的性能！一般游戏是60FPS 射击类游戏 120FPS以上
+        move(10,'move()')//5=200FPS 6=166FPS 7=142FPS 8=125FPS 9=111FPS 10=100FPS
+        addObj($(".picFrame>.picItem").eq(0),800,0,1000,'complete(0)')// JQ对象 ,X位置,Y位置,用时
+    }
+
+    function complete(i){
+        if(i==0){
+            addObj($(".picFrame>.picItem").eq(1),0,1200,2000,'complete(1)')
+        }else if(i==1){
+            addObj($(".picFrame>.picItem").eq(2),800,1200,2000,'complete(2)')
+        }else if(i==2){
+            addObj($(".picFrame>.picItem").eq(3),800,-1200,2000,'complete(3)')
+        }else if(i==3){
+            addObj($(".picFrame>.picItem").eq(4),-800,-1200,2000,'complete(4)')
+        }else if(i==4){
+            addObj($(".picFrame>.picItem").eq(5),800,1200,2000,'complete(5)')
+        }else if(i==5){
+            addObj($(".picFrame>.picItem").eq(4),0,0,1000,'complete(6)')
+        }else if(i==6){
+            addObj($(".picFrame>.picItem").eq(2),0,0,1000,'complete(7)')
+        }else if(i==7){
+            addObj($(".picFrame>.picItem").eq(1),0,0,1000,'complete(8)')
+        }else if(i==8){
+            addObj($(".picFrame>.picItem").eq(0),0,0,1000,'complete(9)')
+        }else if(i==9){
+            $("#next4").show();
+        }
+
+    }
+
+    function addObj(obj,X,Y,time,func){//JQ对象,移动到的位置X,移动到的位置Y,完成动画的总时间,完成后执行的函数
+        var picItem={
+            "obj":obj,/*JQ选择的对象 必须*/
+            "X":X,/*移动到的位置X 必须*/
+            "Y":Y,/*移动到的位置Y 必须*/
+            "X1":parseInt($(obj).css("left"),10),/*对象的起初位置X 自取*/
+            "Y1":parseInt($(obj).css("top"),10),/*对象的起初位置Y  自取*/
+            "progress":0,/*相对时间内的进度  引擎自己计算*/
+            "time":time,/*用多久时间去完成 的总时间 必须*/
+            "wholeProgress":0,/*计算时间 的总进度 引擎自己计算 */
+            "complete":func/*完成后 执行的函数  可以有*/
+        };
+        var exists=false;
+        for (var i=0; i<objArray.length;i++){
+            if(picItem.obj.selector==objArray[i].obj.selector){exists=true;}
+            // JQ 1.7.2 存在这个属性 $('body div').selector 大概等于 'body div' 使用要注意了
+        }
+        if(exists==false){//不存在加入对象
+            objArray[objArray.length]=picItem;
+        }
+    }
+
+    function move(time2){   //用时钟自启动的引擎  引擎就是无限循环  提供动力的那总
+        for(var i=0;i<objArray.length;i++){//循环开始
+            if(objArray[i].wholeProgress==0){//用时间计算出总的进度  进度与时间相关
+                objArray[i].wholeProgress=Math.ceil(objArray[i].time/time2);
+            }
+            if(objArray[i].progress==objArray[i].wholeProgress){
+                objArray[i].obj.css("left", objArray[i].X);//位置最后调整
+                objArray[i].obj.css("top", objArray[i].Y);//位置最后调整
+                var str=objArray[i].complete;
+                objArray.splice(i,1)//删除对象
+                eval(str)//执行回调函数
+            }else{
+                progress=objArray[i].progress/objArray[i].wholeProgress*90;
+                if(objArray[i].X>objArray[i].X1){//横向 向右移动
+                    if(objArray[i].X1<=0){
+                        moveWidth=objArray[i].X+Math.abs(objArray[i].X1);//真实移动宽度
+                    }
+                    else{
+                        moveWidth=Math.abs(Math.abs(objArray[i].X1)-objArray[i].X);//真实移动宽度
+                    }
+                    //计算出移动宽度
+                    position=Math.sin(progress*(2*Math.PI/360))*(moveWidth)
+                    objArray[i].obj.css("left",position+objArray[i].X1);
+                }
+                else{//横向 向左移动
+                    moveWidth=Math.abs(objArray[i].X-Math.abs(objArray[i].X1));//计算出移动距离
+                    position=Math.sin(progress*(2*Math.PI/360))*(moveWidth)
+                    objArray[i].obj.css("left",objArray[i].X1-position);
+                }
+                if(objArray[i].Y>objArray[i].Y1){//纵向 向下移动
+                    if(objArray[i].Y1<=0){
+                        moveWidth=objArray[i].Y+Math.abs(objArray[i].Y1);//真实移动宽度
+                    }
+                    else{
+                        moveWidth=Math.abs(Math.abs(objArray[i].Y1)-objArray[i].Y);//真实移动宽度
+                    }
+                    //计算出移动宽度
+                    position=Math.sin(progress*(2*Math.PI/360))*(moveWidth)
+                    objArray[i].obj.css("top",position+objArray[i].Y1);
+                }
+                else{//横向 向左移动
+                    moveWidth=Math.abs(objArray[i].Y-Math.abs(objArray[i].Y1));//计算出移动距离
+                    position=Math.sin(progress*(2*Math.PI/360))*(moveWidth)
+                    objArray[i].obj.css("top",objArray[i].Y1-position);
+                }
+                objArray[i].progress=objArray[i].progress+1;
+            }
+        }//循环结束
+        setTimeout('move('+time2+')',time2)//自己启动自己//最后执行
     }
 </script>
 </body>
