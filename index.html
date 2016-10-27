@@ -349,7 +349,7 @@
         <div style="width:20rem;height:10rem;margin:auto;margin-top:14rem;margin-bottom:12rem;font-size:1rem;color:white;">
             <p id="question">When</p>
             <div id="answer">
-                <input id="year" class="dateInput" type="text" style="width:4rem"><span style="padding:0.2rem">年l</span>
+                <input id="year" class="dateInput" type="text" style="width:4rem"><span style="padding:0.2rem">年</span>
                 <input id="month" class="dateInput" type="text" style="width:2rem"><span style="padding:0.2rem">月</span>
                 <input id="day" class="dateInput" type="text" style="width:2rem"><span style="padding:0.2rem">日</span>
             </div>
@@ -468,8 +468,8 @@
     </div>
     <div class="perScreen" id="screen5" style="display:none">
         <div class="htmleaf-container">
-		   <div class="ball" style="-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
-               <span style="font-size:40px">AAAA</span>
+		   <div id="ball0" class="ball" style="-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
+               <span style="font-size:40px;font-family: 'Neucha', serif;color:white">AAAA</span>
            </div>
 	   </div>
     </div>
@@ -909,7 +909,7 @@
     }
     function initBalls(){
          var world = anima.world(),
-      item = world.add(document.querySelector('.ball'))
+      item = world.add(document.querySelector('#ball0'))
 
     item
       .animate([
