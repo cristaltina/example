@@ -242,7 +242,7 @@
         #places{
             width: 100%;
             height: 10rem;
-            color: #999999;
+            color: white;
         }
         #firstWord{
             font-size: 1rem;
@@ -266,7 +266,6 @@
             height: 17rem;
             cursor: pointer;
             cursor: hand;
-            /*            color: #793c11;*/
         }
         .card-container-5 .card {
             position: absolute;
@@ -452,7 +451,7 @@
     <div class="perScreen" id="screen4" style="display:none">
         <p style="font-size:1.5rem;color:white;margin-bottom:1rem;margin-top:0">ccccccccccc</p>
         <div class="picFrame" id="picFrameDiv" style="background-color:#1c1c1c;border:0;display:none">
-            <div class="picItem" style="z-index: 6; top:15rem"> <img src="imgs/icon_share_screenshot@2x.png"> </div>
+            <div class="picItem" style="z-index: 6; top:0"> <img src="imgs/icon_share_screenshot@2x.png"> </div>
             <div class="picItem" style="z-index:5;"> <img src="imgs/icon_share_screenshot@2x.png"> </div>
             <div class="picItem" style="z-index:4;"> <img src="imgs/icon_share_screenshot@2x.png"> </div>
             <div class="picItem" style="z-index:3;"> <img src="imgs/icon_share_screenshot@2x.png"> </div>
@@ -791,7 +790,7 @@
     function initImgs1() {
         //启动引擎  FPS 刷新率  刷新率越高一般看起来越流畅 但是也要看电脑的性能！一般游戏是60FPS 射击类游戏 120FPS以上
         move(10,'move()')//5=200FPS 6=166FPS 7=142FPS 8=125FPS 9=111FPS 10=100FPS
-        addObj($(".picFrame>.picItem").eq(0),800,0,1200,'complete(0)')// JQ对象 ,X位置,Y位置,用时
+        addObj($(".picFrame>.picItem").eq(0),830,0,1250,'complete(0)')// JQ对象 ,X位置,Y位置,用时
     }
 
     function complete(i){
