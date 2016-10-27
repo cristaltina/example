@@ -60,7 +60,7 @@
             width: 5rem;
             height: 5rem;
             border-radius: 2rem;
-            position: absolute;
+            position: fixed;
             right: 2rem;
             bottom: 3rem;
         }
@@ -313,8 +313,8 @@
         .picFrame {
             background-color:#CCC;
             border: #CCC 1px solid;
-            width: 800px;
-            height: 1200px;
+            width: 830px;
+            height: 1250px;
             margin: auto;
             margin-top: 40px;
             position: relative;/*启动相对定位 让子集元素能相对与 父级元素定位*/
@@ -324,12 +324,12 @@
             position: absolute;/*开启绝对定位  相对于父级元素定位*/
             left: 0;
             top: 0;
-            width:800px;
-            height: 1200px;
+            width:830px;
+            height: 1250px;
         }
         .picItem img{
-            width:800px;
-            height: 1200px;
+            width:830px;
+            height: 1250px;
         }
  
 
@@ -519,6 +519,8 @@
         if(movie=="匆匆那年"){
             $("#question").text("First gift u");
             $("#answer").empty();
+            $("#answer").css("text-align","left");
+            $("#answer").css("margin-left","3rem");
             var tr ="<input type='radio' name='gift0' value='0' style='font-size:1.3rem'>aa<br>" +
                     "<input type='radio' name='gift0' value='1' style='font-size:1.3rem'>bb<br>" +
                     "<input type='radio' name='gift0' value='2' style='font-size:1.3rem'>cc<br>" +
