@@ -468,17 +468,17 @@
     </div>
     <div class="perScreen" id="screen5" style="display:none">
 	<div class="htmleaf-container">
-		<div id="ball0" class="ball" style="-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
-    <span style="font-size:40px">AAAA</span>
+		<div id="ball0" class="ball" style="display:none;-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
+    <span style="font-size:40px;font-family:'Neucha';color:white">AAAA</span>
     </div>
-    <div id="ball1" class="ball" style="-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
-    <span style="font-size:40px">AAAA</span>
+    <div id="ball1" class="ball" style="display:none;-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
+    <span style="font-size:40px;font-family:'Neucha';color:white">AAAA</span>
     </div>
-    <div id="ball2" class="ball" style="-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
-    <span style="font-size:40px">AAAA</span>
+    <div id="ball2" class="ball" style="display:none;-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
+    <span style="font-size:40px;font-family:'Neucha';color:white">AAAA</span>
     </div>
-    <div id="ball3" class="ball" style="-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
-    <span style="font-size:40px">AAAA</span>
+    <div id="ball3" class="ball" style="display:none;-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
+    <span style="font-size:40px;font-family:'Neucha';color:white">AAAA</span>
     </div>
 	</div>
     </div>
@@ -920,8 +920,9 @@
     }
     function initBall0(){
          var world = anima.world(),
+	     $("#ball0").show();
       item = world.add(document.querySelector('#ball0'))
-
+      
     item
       .animate([
         {
@@ -984,6 +985,7 @@
     }
    function initBall1(){
          var world = anima.world(),
+	     $("#ball1").show();
       item1 = world.add(document.querySelector('#ball1'))
 
    item1
@@ -1027,6 +1029,7 @@
 	
     function initBall2(){
          var world = anima.world(),
+	     $("#ball2").show()
       item2 = world.add(document.querySelector('#ball2'));
       item2
       .animate([
@@ -1048,7 +1051,7 @@
           translate: [0, -200, 0],
           ease: 'ease-out-quad'
         },{
-          translate: [500, 0, 0]
+          translate: [50, 0, 0]
         }
       ], 450)
       .animate([
@@ -1075,7 +1078,7 @@
       ], 350)
       .animate([
         {
-          translate: [0, 400, 0],
+          translate: [0, 500, 0],
           ease: 'ease-in-quad'
         },{
           translate: [100, 0, 0]
