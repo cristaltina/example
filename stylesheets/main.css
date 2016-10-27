@@ -17,3 +17,9 @@
   background: radial-gradient(40px 40px, circle, #D7E7F1 0%, #AFD3EE 10%, #6DA9D5 20%, #238FE2 30%, #2081CB 50%, #0E5D99 70%);
   border: none;
 }
+
+.htmleaf-container{
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+}
