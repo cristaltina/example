@@ -915,80 +915,81 @@
         $("#screen4").hide();
         $("#screen5").show();
         initBall0();
-	setTimeout("initBall1()",5000);
-	setTimeout("initBall2()",10000);
+	setTimeout("initBall1()",4000);
+	setTimeout("initBall2()",8000);
+	setTimeout("initBall3()",12000);
     }
-    function initBall0(){
-         var world = anima.world(),
-      item = world.add(document.querySelector('#ball0'));
-	     $("#ball0").show();
+//     function initBall0(){
+//          var world = anima.world(),
+//       item = world.add(document.querySelector('#ball0'));
+// 	     $("#ball0").show();
       
-    item
-      .animate([
-        {
-          translate: [0, 300, 0], //基调下落高度是 300 - 0
-          ease: 'ease-in-quad'
-        },{
-          translate: [10, 0, 0] //基调X Y坐标
-        }
-      ], 500)
-      .animate({
-        scale: [.1, -.2, 0]  //落地时 发生变形 以模拟落地形态
-      }, 50)
-      .animate({
-        scale: [-.1, .2, 0]  //弹起时 发生变形 以模拟弹起形态
-      }, 50)
-      .animate([
-        {
-          translate: [0, -100, 0],
-          ease: 'ease-out-quad'
-        },{
-          translate: [300, 0, 0]
-        }
-      ], 450)
-      .animate([
-        {
-          translate: [0, 200, 0],
-          ease: 'ease-in-quad'
-        },{
-          translate: [150, 0, 0]
-        }
-      ], 400)
-      .animate({
-        scale: [.05, -.15, 0]
-      }, 40)
-      .animate({
-        scale: [-.05, .15, 0]
-      }, 40)
-      .animate([
-        {
-          translate: [0, -100, 0],
-          ease: 'ease-out-quad'
-        },{
-          translate: [100, 0, 0]
-        }
-      ], 350)
-      .animate([
-        {
-          translate: [0, 100, 0],
-          ease: 'ease-in-quad'
-        },{
-          translate: [100, 0, 0]
-        }
-      ], 300)
-      .animate({
-        scale: [.02, -.1, 0]
-      }, 25)
-      .animate({
-        scale: [-.02, .1, 0]
-      }, 25)
-    }
-   function initBall1(){
+//     item
+//       .animate([
+//         {
+//           translate: [0, 300, 0], //基调下落高度是 300 - 0
+//           ease: 'ease-in-quad'
+//         },{
+//           translate: [10, 0, 0] //基调X Y坐标
+//         }
+//       ], 500)
+//       .animate({
+//         scale: [.1, -.2, 0]  //落地时 发生变形 以模拟落地形态
+//       }, 50)
+//       .animate({
+//         scale: [-.1, .2, 0]  //弹起时 发生变形 以模拟弹起形态
+//       }, 50)
+//       .animate([
+//         {
+//           translate: [0, -100, 0],
+//           ease: 'ease-out-quad'
+//         },{
+//           translate: [300, 0, 0]
+//         }
+//       ], 450)
+//       .animate([
+//         {
+//           translate: [0, 200, 0],
+//           ease: 'ease-in-quad'
+//         },{
+//           translate: [150, 0, 0]
+//         }
+//       ], 400)
+//       .animate({
+//         scale: [.05, -.15, 0]
+//       }, 40)
+//       .animate({
+//         scale: [-.05, .15, 0]
+//       }, 40)
+//       .animate([
+//         {
+//           translate: [0, -100, 0],
+//           ease: 'ease-out-quad'
+//         },{
+//           translate: [100, 0, 0]
+//         }
+//       ], 350)
+//       .animate([
+//         {
+//           translate: [0, 100, 0],
+//           ease: 'ease-in-quad'
+//         },{
+//           translate: [100, 0, 0]
+//         }
+//       ], 300)
+//       .animate({
+//         scale: [.02, -.1, 0]
+//       }, 25)
+//       .animate({
+//         scale: [-.02, .1, 0]
+//       }, 25)
+//     }
+   function initBall0(){
          var world = anima.world(),
-      item1 = world.add(document.querySelector('#ball1'));
-	     $("#ball1").show();
+      item0 = world.add(document.querySelector('#ball0'));
+	     $("#ball0").show();
 
-   item1
+   item0
       .animate([
         {
           translate: [0, 500, 0], //基调下落高度是 300 - 0
@@ -1027,17 +1028,17 @@
       }, 40)
     }
 	
-    function initBall2(){
+    function initBall1(){
          var world = anima.world(),
-      item2 = world.add(document.querySelector('#ball2'));
-	       $("#ball2").show();
-      item2
+      item1 = world.add(document.querySelector('#ball1'));
+	       $("#ball1").show();
+      item1
       .animate([
         {
           translate: [0, 600, 0], //基调下落高度是 300 - 0
           ease: 'ease-in-quad'
         },{
-          translate: [50, 0, 0] //基调X Y坐标
+          translate: [150, 0, 0] //基调X Y坐标
         }
       ], 500)
       .animate({
@@ -1059,7 +1060,7 @@
           translate: [0, 200, 0],
           ease: 'ease-in-quad'
         },{
-          translate: [150, 0, 0]
+          translate: [50, 0, 0]
         }
       ], 400)
       .animate({
@@ -1081,7 +1082,137 @@
           translate: [0, 500, 0],
           ease: 'ease-in-quad'
         },{
-          translate: [100, 0, 0]
+          translate: [80, 0, 0]
+        }
+      ], 300)
+      .animate({
+        scale: [.02, -.1, 0]
+      }, 25)
+      .animate({
+        scale: [-.02, .1, 0]
+      }, 25)
+
+    }
+	 function initBall2(){
+         var world = anima.world(),
+      item2 = world.add(document.querySelector('#ball2'));
+	       $("#ball2").show();
+      item1
+      .animate([
+        {
+          translate: [0, 700, 0], //基调下落高度是 300 - 0
+          ease: 'ease-in-quad'
+        },{
+          translate: [20, 0, 0] //基调X Y坐标
+        }
+      ], 500)
+      .animate({
+        scale: [.1, -.2, 0]  //落地时 发生变形 以模拟落地形态
+      }, 50)
+      .animate({
+        scale: [-.1, .2, 0]  //弹起时 发生变形 以模拟弹起形态
+      }, 50)
+      .animate([
+        {
+          translate: [0, -200, 0],
+          ease: 'ease-out-quad'
+        },{
+          translate: [50, 0, 0]
+        }
+      ], 450)
+      .animate([
+        {
+          translate: [0, 300, 0],
+          ease: 'ease-in-quad'
+        },{
+          translate: [50, 0, 0]
+        }
+      ], 400)
+      .animate({
+        scale: [.05, -.15, 0]
+      }, 40)
+      .animate({
+        scale: [-.05, .15, 0]
+      }, 40)
+      .animate([
+        {
+          translate: [0, -200, 0],
+          ease: 'ease-out-quad'
+        },{
+          translate: [50, 0, 0]
+        }
+      ], 350)
+      .animate([
+        {
+          translate: [0, 300, 0],
+          ease: 'ease-in-quad'
+        },{
+          translate: [80, 0, 0]
+        }
+      ], 300)
+      .animate({
+        scale: [.02, -.1, 0]
+      }, 25)
+      .animate({
+        scale: [-.02, .1, 0]
+      }, 25)
+
+    }
+	function initBall3(){
+         var world = anima.world(),
+      item3 = world.add(document.querySelector('#ball3'));
+	       $("#ball3").show();
+      item3
+      .animate([
+        {
+          translate: [0, 800, 0], //基调下落高度是 300 - 0
+          ease: 'ease-in-quad'
+        },{
+          translate: [100, 0, 0] //基调X Y坐标
+        }
+      ], 500)
+      .animate({
+        scale: [.1, -.2, 0]  //落地时 发生变形 以模拟落地形态
+      }, 50)
+      .animate({
+        scale: [-.1, .2, 0]  //弹起时 发生变形 以模拟弹起形态
+      }, 50)
+      .animate([
+        {
+          translate: [0, -250, 0],
+          ease: 'ease-out-quad'
+        },{
+          translate: [150, 0, 0]
+        }
+      ], 450)
+      .animate([
+        {
+          translate: [0, 300, 0],
+          ease: 'ease-in-quad'
+        },{
+          translate: [50, 0, 0]
+        }
+      ], 400)
+      .animate({
+        scale: [.05, -.15, 0]
+      }, 40)
+      .animate({
+        scale: [-.05, .15, 0]
+      }, 40)
+      .animate([
+        {
+          translate: [0, -200, 0],
+          ease: 'ease-out-quad'
+        },{
+          translate: [150, 0, 0]
+        }
+      ], 350)
+      .animate([
+        {
+          translate: [0, 400, 0],
+          ease: 'ease-in-quad'
+        },{
+          translate: [80, 0, 0]
         }
       ], 300)
       .animate({
