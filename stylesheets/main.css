@@ -10,11 +10,7 @@
   -moz-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
-  background: -webkit-radial-gradient(40px 40px, circle, #D7E7F1 0%, #AFD3EE 10%, #6DA9D5 20%, #238FE2 30%, #2081CB 50%, #0E5D99 70%);
-  background: -moz-radial-gradient(40px 40px, circle, #D7E7F1 0%, #AFD3EE 10%, #6DA9D5 20%, #238FE2 30%, #2081CB 50%, #0E5D99 70%);
-  background: -ms-radial-gradient(40px 40px, circle, #D7E7F1 0%, #AFD3EE 10%, #6DA9D5 20%, #238FE2 30%, #2081CB 50%, #0E5D99 70%);
-  background: -o-radial-gradient(40px 40px, circle, #D7E7F1 0%, #AFD3EE 10%, #6DA9D5 20%, #238FE2 30%, #2081CB 50%, #0E5D99 70%);
-  background: radial-gradient(40px 40px, circle, #D7E7F1 0%, #AFD3EE 10%, #6DA9D5 20%, #238FE2 30%, #2081CB 50%, #0E5D99 70%);
+  background-color: #1c1c1c;
   border: none;
 }
 
