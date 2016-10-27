@@ -920,8 +920,8 @@
     }
     function initBall0(){
          var world = anima.world(),
+      item = world.add(document.querySelector('#ball0'));
 	     $("#ball0").show();
-      item = world.add(document.querySelector('#ball0'))
       
     item
       .animate([
@@ -985,8 +985,8 @@
     }
    function initBall1(){
          var world = anima.world(),
+      item1 = world.add(document.querySelector('#ball1'));
 	     $("#ball1").show();
-      item1 = world.add(document.querySelector('#ball1'))
 
    item1
       .animate([
@@ -1029,8 +1029,8 @@
 	
     function initBall2(){
          var world = anima.world(),
-	     $("#ball2").show()
       item2 = world.add(document.querySelector('#ball2'));
+	       $("#ball2").show();
       item2
       .animate([
         {
