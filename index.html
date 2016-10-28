@@ -468,8 +468,8 @@
     </div>
     <div class="perScreen" id="screen5" style="display:none">
 	<div style="float:right;font-size:1rem;color:white">
-        <p>ddddddddddddddddd</p>
-	<p>eeeee</p>
+        <p id="word0" style="float:right;font-size:1rem;color:white;display:none">ddddddddddddddddd</p><br>
+	<p id="word1" style="float:right;font-size:1rem;color:white;display:none">eeeee</p><br>
 	</div>
 	<div class="htmleaf-container">
             <div id="ball0" class="ball" style="display:none;-webkit-transform-origin: 0% 100%;-moz-transform-origin: 0% 100%;-ms-transform-origin: 0% 100%;-o-transform-origin: 0% 100%;transform-origin: 0% 100%;text-align:center;line-height:200px">
@@ -918,10 +918,14 @@
         console.log("nextScreen4");
         $("#screen4").hide();
         $("#screen5").show();
-        initBall0();
-	setTimeout("initBall1()",4000);
-	setTimeout("initBall2()",8000);
-	setTimeout("initBall3()",12000);
+	$("#word0").show(1000,function(){
+	   $("#word1").show(1000,function(){
+	      initBall0();
+	      setTimeout("initBall1()",3500);
+	      setTimeout("initBall2()",7000);
+	      setTimeout("initBall3()",10500);
+	   })
+	})
     }
    function initBall0(){
          var world = anima.world(),
